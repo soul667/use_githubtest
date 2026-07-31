@@ -1,0 +1,18 @@
+# NAME: LAN
+# DESCRIPTION: Localhost, private networks, link-local and ULA direct rules
+# FORMAT: Mihomo / Clash.Meta classical rule-provider
+# UPDATED: 2026-07-31
+
+payload:
+  # IPv4 loopback / private / link-local / CGNAT
+  - IP-CIDR,127.0.0.0/8,no-resolve
+  - IP-CIDR,10.0.0.0/8,no-resolve
+  - IP-CIDR,172.16.0.0/12,no-resolve
+  - IP-CIDR,192.168.0.0/16,no-resolve
+  - IP-CIDR,169.254.0.0/16,no-resolve
+  - IP-CIDR,100.64.0.0/10,no-resolve
+
+  # IPv6 loopback / unique-local / link-local
+  - IP-CIDR6,::1/128,no-resolve
+  - IP-CIDR6,fc00::/7,no-resolve
+  - IP-CIDR6,fe80::/10,no-resolve
