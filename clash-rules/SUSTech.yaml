@@ -19,6 +19,7 @@
 # Scope:
 # - All current official SUSTech subdomains under sustech.edu.cn
 # - Legacy sustc.edu.cn links still referenced by some official pages
+# - SUSTech community services under sustech.online
 # - SUSTech Rain Classroom tenant
 # - SUSTech CERNET IPv6 prefix
 #
@@ -28,5 +29,6 @@
 payload:
   - DOMAIN-SUFFIX,sustech.edu.cn
   - DOMAIN-SUFFIX,sustc.edu.cn
+  - DOMAIN-SUFFIX,sustech.online
   - DOMAIN,sustc.yuketang.cn
   - IP-CIDR6,2001:da8:201d::/48,no-resolve
