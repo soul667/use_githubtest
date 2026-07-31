@@ -1,0 +1,34 @@
+# NAME: AI
+# DESCRIPTION: OpenAI, Cursor, xAI, Anthropic and Google AI services
+# FORMAT: Mihomo / Clash.Meta classical rule-provider
+# UPDATED: 2026-07-31
+
+payload:
+  # OpenAI / ChatGPT / Codex
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,oaistatic.com
+  - DOMAIN-SUFFIX,oaiusercontent.com
+  - DOMAIN-SUFFIX,chatgpt.livekit.cloud
+
+  # Cursor / Anysphere
+  - DOMAIN-SUFFIX,cursor.com
+  - DOMAIN-SUFFIX,cursor.sh
+  - DOMAIN-SUFFIX,cursorapi.com
+  - DOMAIN-SUFFIX,anysphere.co
+
+  # xAI / Grok
+  - DOMAIN-SUFFIX,x.ai
+  - DOMAIN-SUFFIX,grok.com
+
+  # Anthropic / Claude
+  - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,claudeusercontent.com
+
+  # Google AI / Gemini
+  - DOMAIN,gemini.google.com
+  - DOMAIN,aistudio.google.com
+  - DOMAIN,ai.google.dev
+  - DOMAIN,generativelanguage.googleapis.com
+  - DOMAIN,accounts.google.com
