@@ -1,0 +1,69 @@
+# Mihomo / Clash Verge rule-provider integration example
+# Merge the following sections into your active profile.
+# The proxy groups must already exist with exactly these names:
+#   📥 下载专用
+#   🧠 AI服务
+#   🚀 节点选择
+
+rule-providers:
+  LAN:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./ruleset/LAN.yaml
+    url: https://raw.githubusercontent.com/soul667/use_githubtest/main/clash-rules/LAN.yaml
+    interval: 86400
+    proxy: 🚀 节点选择
+
+  SUSTech:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./ruleset/SUSTech.yaml
+    url: https://raw.githubusercontent.com/soul667/use_githubtest/main/clash-rules/SUSTech.yaml
+    interval: 86400
+    proxy: 🚀 节点选择
+
+  Downloads:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./ruleset/Downloads.yaml
+    url: https://raw.githubusercontent.com/soul667/use_githubtest/main/clash-rules/Downloads.yaml
+    interval: 86400
+    proxy: 🚀 节点选择
+
+  AI:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./ruleset/AI.yaml
+    url: https://raw.githubusercontent.com/soul667/use_githubtest/main/clash-rules/AI.yaml
+    interval: 86400
+    proxy: 🚀 节点选择
+
+  Global:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./ruleset/Global.yaml
+    url: https://raw.githubusercontent.com/soul667/use_githubtest/main/clash-rules/Global.yaml
+    interval: 86400
+    proxy: 🚀 节点选择
+
+rules:
+  # Keep this explicit rule first while diagnosing the campus-printing 403.
+  - DOMAIN,pms.sustech.edu.cn,DIRECT
+
+  # Local and campus resources
+  - RULE-SET,LAN,DIRECT
+  - RULE-SET,SUSTech,DIRECT
+
+  # Dedicated routing groups
+  - RULE-SET,AI,🧠 AI服务
+  - RULE-SET,Downloads,📥 下载专用
+  - RULE-SET,Global,🚀 节点选择
+
+  # Mainland fallback and final catch-all
+  - GEOIP,CN,DIRECT
+  - MATCH,🚀 节点选择
