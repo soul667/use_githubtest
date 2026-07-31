@@ -1,0 +1,42 @@
+# NAME: Downloads
+# DESCRIPTION: Development environments, package indexes, models and container registries
+# FORMAT: Mihomo / Clash.Meta classical rule-provider
+# UPDATED: 2026-07-31
+
+payload:
+  # Python / PyPI
+  - DOMAIN-SUFFIX,pypi.org
+  - DOMAIN-SUFFIX,pythonhosted.org
+
+  # Conda / Anaconda / conda-forge
+  - DOMAIN-SUFFIX,anaconda.com
+  - DOMAIN-SUFFIX,anaconda.org
+  - DOMAIN-SUFFIX,conda.io
+  - DOMAIN-SUFFIX,conda-forge.org
+  - DOMAIN-SUFFIX,prefix.dev
+
+  # Hugging Face
+  - DOMAIN-SUFFIX,huggingface.co
+  - DOMAIN-SUFFIX,hf.co
+  - DOMAIN-SUFFIX,huggingfaceusercontent.com
+  - DOMAIN-SUFFIX,hf-mirror.com
+
+  # Ubuntu / apt / Launchpad
+  - DOMAIN-SUFFIX,ubuntu.com
+  - DOMAIN-SUFFIX,launchpad.net
+  - DOMAIN-SUFFIX,launchpadcontent.net
+
+  # PyTorch
+  - DOMAIN-SUFFIX,pytorch.org
+
+  # GitHub / Git LFS / GHCR
+  - DOMAIN-SUFFIX,github.com
+  - DOMAIN-SUFFIX,githubusercontent.com
+  - DOMAIN-SUFFIX,githubassets.com
+  - DOMAIN-SUFFIX,git-lfs.com
+  - DOMAIN-SUFFIX,ghcr.io
+
+  # Docker / Quay
+  - DOMAIN-SUFFIX,docker.com
+  - DOMAIN-SUFFIX,docker.io
+  - DOMAIN-SUFFIX,quay.io
