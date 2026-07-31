@@ -1,0 +1,32 @@
+# NAME: SUSTech
+# DESCRIPTION: Southern University of Science and Technology (南方科技大学)
+# FORMAT: Mihomo / Clash.Meta classical rule-provider
+# UPDATED: 2026-07-31
+#
+# Usage:
+# rule-providers:
+#   SUSTech:
+#     type: http
+#     behavior: classical
+#     format: yaml
+#     path: ./ruleset/SUSTech.yaml
+#     url: https://raw.githubusercontent.com/soul667/use_githubtest/main/clash-rules/SUSTech.yaml
+#     interval: 86400
+#
+# rules:
+#   - RULE-SET,SUSTech,DIRECT
+#
+# Scope:
+# - All current official SUSTech subdomains under sustech.edu.cn
+# - Legacy sustc.edu.cn links still referenced by some official pages
+# - SUSTech Rain Classroom tenant
+# - SUSTech CERNET IPv6 prefix
+#
+# Broad CERNET IPv4 ranges are intentionally excluded because no sufficiently
+# authoritative school-specific IPv4 aggregate was found.
+
+payload:
+  - DOMAIN-SUFFIX,sustech.edu.cn
+  - DOMAIN-SUFFIX,sustc.edu.cn
+  - DOMAIN,sustc.yuketang.cn
+  - IP-CIDR6,2001:da8:201d::/48,no-resolve
