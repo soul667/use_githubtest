@@ -1,0 +1,30 @@
+# NAME: Global
+# DESCRIPTION: Common non-mainland services routed through the general proxy group
+# FORMAT: Mihomo / Clash.Meta classical rule-provider
+# UPDATED: 2026-07-31
+
+payload:
+  # Google ecosystem
+  - DOMAIN-SUFFIX,google.com
+  - DOMAIN-SUFFIX,googleusercontent.com
+  - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-SUFFIX,googlevideo.com
+
+  # YouTube
+  - DOMAIN-SUFFIX,youtube.com
+  - DOMAIN-SUFFIX,youtu.be
+  - DOMAIN-SUFFIX,ytimg.com
+
+  # Meta / Facebook
+  - DOMAIN-SUFFIX,facebook.com
+  - DOMAIN-SUFFIX,fbcdn.net
+  - DOMAIN-SUFFIX,instagram.com
+  - DOMAIN-SUFFIX,cdninstagram.com
+
+  # X / Twitter
+  - DOMAIN-SUFFIX,twitter.com
+  - DOMAIN-SUFFIX,x.com
+  - DOMAIN-SUFFIX,twimg.com
+
+  # Microsoft Bing
+  - DOMAIN-SUFFIX,bing.com
